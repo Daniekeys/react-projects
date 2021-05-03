@@ -36,6 +36,16 @@ function App() {
       </main>
     )
   }
+  if(tours.length === 0) {
+    return (
+      <main>
+        <div className="title">
+          <h2>no tours left</h2>
+          <button onClick={fetchTours}>Reload tours</button>
+        </div>
+      </main>
+    )
+  }
   return (
     <main>
       {/* we just need to passs in the remove tour as an property to the other children */}
